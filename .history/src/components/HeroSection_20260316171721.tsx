@@ -1,12 +1,10 @@
 import { MapPin, Home, Search, LocateFixed } from "lucide-react";
 import { useState } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState("Rent");
   const tabs = ["Rent", "Buy", "Commercial Rent", "Commercial Buy"];
-
-  const heroBg =
-    "https://raw.githubusercontent.com/gopalvishwakrma/heartsync/main/hero-image.jpg";
 
   return (
     <section
@@ -25,7 +23,7 @@ const HeroSection = () => {
           ].map((badge) => (
             <span
               key={badge.text}
-              className="bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium text-foreground flex items-center gap-1.5"
+              // className="bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium text-foreground flex items-center gap-1.5"
             >
               {badge.icon} {badge.text}
             </span>

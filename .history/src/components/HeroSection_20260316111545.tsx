@@ -1,12 +1,10 @@
 import { MapPin, Home, Search, LocateFixed } from "lucide-react";
 import { useState } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState("Rent");
   const tabs = ["Rent", "Buy", "Commercial Rent", "Commercial Buy"];
-
-  const heroBg =
-    "https://raw.githubusercontent.com/gopalvishwakrma/heartsync/main/hero-image.jpg";
 
   return (
     <section
