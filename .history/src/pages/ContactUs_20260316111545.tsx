@@ -32,9 +32,9 @@ const ContactUs = () => {
             <h2 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h2>
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "Phone", value: "+91 99208 18110" },
-                { icon: Mail, label: "Email", value: "hello@ownerslane.com" },
-                { icon: MapPin, label: "Address", value: "GOKUL ARCADE,'A' WING GROUND FLOOR OFFICE NUMBER 36 GARWARE CHOWK,SAHAR ROAD,VILE PARLE EAST MUMBAI - 400057" },
+                { icon: Phone, label: "Phone", value: "+91 685 88666" },
+                { icon: Mail, label: "Email", value: "support@ownerslane.com" },
+                { icon: MapPin, label: "Address", value: "Bangalore, Karnataka, India" },
                 { icon: Clock, label: "Working Hours", value: "Mon - Sat, 9 AM - 7 PM" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">

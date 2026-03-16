@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Youtube, X, AtSign } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 const Footer = () => {
   const columns = [
@@ -89,34 +90,64 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-xs text-primary-foreground/60">© 2026 OwnersLane Pvt. Ltd. – All rights reserved</p>
-          <div className="flex items-center gap-4 mt-4 md:mt-0">
-            <span className="text-sm text-primary-foreground/60">Follow Us</span>
-            {[
-              { icon: <Instagram size={20} />, label: "Instagram", href: "https://www.instagram.com/ownerslane?igsh=MTRyc2dqbDczaXFrYw==" },
-              { icon: <Facebook size={20} />, label: "Facebook", href: "https://www.facebook.com/share/1CKztVpqMx/" },
-              { icon: <X size={20} />, label: "X", href: "https://x.com/OwnersLane" },
-              { icon: <AtSign size={20} />, label: "Threads", href: "https://www.threads.com/@ownerslane" },
-              { icon: <Youtube size={20} />, label: "YouTube", href: "https://youtube.com/@ownerslane?si=YfuQHIDpw-Hfnci_" },
-            ].map((social, i) => (
-              <a
-                key={i}
-                href={social.href}
-                title={social.label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-        </div>
+  
+  <p className="text-xs text-primary-foreground/60">
+    © 2026 OwnersLane Pvt. Ltd. – All rights reserved
+  </p>
+
+  <div className="flex items-center gap-4 mt-4 md:mt-0">
+    <span className="text-sm text-primary-foreground/60">Follow Us</span>
+
+    <a
+      href="https://www.instagram.com/ownerslane?igsh=MTRyc2dqbDczaXFrYw=="
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-foreground/60 hover:text-primary-foreground text-lg"
+    >
+      <FaInstagram />
+    </a>
+
+    <a
+      href="https://www.facebook.com/share/1CKztVpqMx/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-foreground/60 hover:text-primary-foreground text-lg"
+    >
+      <FaFacebookF />
+    </a>
+
+    <a
+      href="https://x.com/OwnersLane"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-foreground/60 hover:text-primary-foreground text-lg"
+    >
+      <FaXTwitter />
+    </a>
+
+    <a
+      href="https://www.threads.com/@ownerslane"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-foreground/60 hover:text-primary-foreground text-lg"
+    >
+      <FaThreads />
+    </a>
+
+    <a
+      href="https://youtube.com/@ownerslane?si=YfuQHIDpw-Hfnci_"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-foreground/60 hover:text-primary-foreground text-lg"
+    >
+      <FaYoutube />
+    </a>
+
+  </div>
+</div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-

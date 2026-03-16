@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Youtube, X, AtSign } from "lucide-react";
 
 const Footer = () => {
   const columns = [
@@ -93,20 +92,13 @@ const Footer = () => {
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <span className="text-sm text-primary-foreground/60">Follow Us</span>
             {[
-              { icon: <Instagram size={20} />, label: "Instagram", href: "https://www.instagram.com/ownerslane?igsh=MTRyc2dqbDczaXFrYw==" },
-              { icon: <Facebook size={20} />, label: "Facebook", href: "https://www.facebook.com/share/1CKztVpqMx/" },
-              { icon: <X size={20} />, label: "X", href: "https://x.com/OwnersLane" },
-              { icon: <AtSign size={20} />, label: "Threads", href: "https://www.threads.com/@ownerslane" },
-              { icon: <Youtube size={20} />, label: "YouTube", href: "https://youtube.com/@ownerslane?si=YfuQHIDpw-Hfnci_" },
+              { icon: "📷", label: "Instagram" },
+              { icon: "📘", label: "Facebook" },
+              { icon: "✖", label: "X" },
+              { icon: "💼", label: "LinkedIn" },
+              { icon: "▶", label: "YouTube" },
             ].map((social, i) => (
-              <a
-                key={i}
-                href={social.href}
-                title={social.label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
+              <a key={i} href="#" title={social.label} className="text-primary-foreground/60 hover:text-primary-foreground text-lg">
                 {social.icon}
               </a>
             ))}
