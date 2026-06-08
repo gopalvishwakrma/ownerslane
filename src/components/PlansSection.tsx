@@ -190,7 +190,7 @@ type Plan = {
   badge: string;
   badgeIcon: JSX.Element;
   price: string;
-  priceNote: string;
+  priceNote?: string;
   tagline: string;
   features: string[];
   highlighted: boolean;
@@ -245,7 +245,6 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badge: "Most Popular",
       badgeIcon: <Flame size={16} className="text-orange-500" />,
       price: "₹ 999",
-
       tagline: "Best for owners who want direct buyer leads",
       highlighted: true,
       features: [
@@ -334,9 +333,11 @@ const PlansSection = () => {
               <span className={`text-3xl font-bold ${plan.highlighted ? "text-primary-foreground" : "text-foreground"}`}>
                 {plan.price}
               </span>
-              <span className={`text-sm ml-2 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                {plan.priceNote}
-              </span>
+              {plan.priceNote && (
+                <span className={`text-sm ml-2 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  {plan.priceNote}
+                </span>
+              )}
             </div>
             <p className={`text-sm mb-6 ${plan.highlighted ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
               {plan.tagline}

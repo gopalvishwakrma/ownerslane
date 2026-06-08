@@ -55,21 +55,30 @@ const Navbar = () => {
     <header>
       {/* Top bar */}
       <div className="bg-primary px-4 py-2 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary-foreground rounded-full flex items-center justify-center">
-            <span className="text-primary text-xs font-bold">🤝</span>
-          </div>
-          <div>
-            <span className="text-primary-foreground font-semibold text-sm">OwnersLane</span>
-            <span className="text-primary-foreground text-xs ml-1">"Own Your Lane"</span>
-            <div className="flex items-center gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-xs">★</span>
-              ))}
-              <span className="text-primary-foreground text-xs ml-1">(5.0)</span>
-            </div>
-          </div>
-        </Link>
+<Link to="/" className="flex items-center gap-3">
+  <img
+    src="https://raw.githubusercontent.com/gopalvishwakrma/heartsync/main/ownerslane-logo.png"
+    alt="OwnersLane Logo"
+    className="w-9 h-9 object-contain rounded-md"
+  />
+
+  <div className="flex flex-col leading-tight gap-1"> {/* vertical layout */}
+    <span className="text-primary-foreground font-semibold text-sm">
+      OwnersLane
+    </span>
+
+    {/* <span className="text-primary-foreground/80 text-xs">
+      "Own Your Lane"
+    </span> */}
+
+    <div className="flex items-center gap-1">
+      {[...Array(5)].map((_, i) => (
+        <span key={i} className="text-yellow-400 text-[10px]">★</span>
+      ))}
+      <span className="text-primary-foreground text-[10px]">(5.0)</span>
+    </div>
+  </div>
+</Link>
         <button className="border border-primary-foreground text-primary-foreground px-4 py-1.5 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-primary-foreground hover:text-primary transition-colors">
           Download App <Download size={16} />
         </button>
@@ -119,8 +128,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <a href="tel:+9168588666" className="hidden md:flex items-center gap-2 text-sm font-medium text-foreground">
-            <Phone size={16} /> +91 685 88666
+          <a href="tel:+91 9920818110" className="hidden md:flex items-center gap-2 text-sm font-medium text-foreground">
+            <Phone size={16} /> +91 99208 18110
           </a>
           <Heart size={20} className="text-foreground cursor-pointer hover:text-primary" />
           <Link
@@ -191,3 +200,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

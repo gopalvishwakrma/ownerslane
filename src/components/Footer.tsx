@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Facebook, Instagram, Youtube, X, AtSign } from "lucide-react";
 
 const Footer = () => {
   const columns = [
@@ -63,12 +64,12 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">OwnersLane</h3>
             <p className="text-xs text-primary-foreground/60 mb-1">Address</p>
             <p className="text-sm font-semibold mb-4">
-              4th Floor, Tower B, Prestige Tech Park, Marathahalli, Bangalore 560103
+              GOKUL ARCADE,'A' WING GROUND FLOOR OFFICE NUMBER 36 GARWARE CHOWK,SAHAR ROAD,VILE PARLE EAST MUMBAI - 400057
             </p>
             <p className="text-xs text-primary-foreground/60 mb-1">Customer Support</p>
-            <p className="text-sm font-semibold mb-4">+91 685 88666</p>
+            <p className="text-sm font-semibold mb-4">+91 99208 18110</p>
             <p className="text-xs text-primary-foreground/60 mb-1">Email Us</p>
-            <p className="text-sm font-semibold">support@ownerslane.com</p>
+            <p className="text-sm font-semibold">hello@ownerslane.com</p>
           </div>
 
           {columns.map((col) => (
@@ -92,13 +93,20 @@ const Footer = () => {
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <span className="text-sm text-primary-foreground/60">Follow Us</span>
             {[
-              { icon: "📷", label: "Instagram" },
-              { icon: "📘", label: "Facebook" },
-              { icon: "✖", label: "X" },
-              { icon: "💼", label: "LinkedIn" },
-              { icon: "▶", label: "YouTube" },
+              { icon: <Instagram size={20} />, label: "Instagram", href: "https://www.instagram.com/ownerslane?igsh=MTRyc2dqbDczaXFrYw==" },
+              { icon: <Facebook size={20} />, label: "Facebook", href: "https://www.facebook.com/share/1CKztVpqMx/" },
+              { icon: <X size={20} />, label: "X", href: "https://x.com/OwnersLane" },
+              { icon: <AtSign size={20} />, label: "Threads", href: "https://www.threads.com/@ownerslane" },
+              { icon: <Youtube size={20} />, label: "YouTube", href: "https://youtube.com/@ownerslane?si=YfuQHIDpw-Hfnci_" },
             ].map((social, i) => (
-              <a key={i} href="#" title={social.label} className="text-primary-foreground/60 hover:text-primary-foreground text-lg">
+              <a
+                key={i}
+                href={social.href}
+                title={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
                 {social.icon}
               </a>
             ))}
@@ -110,3 +118,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
