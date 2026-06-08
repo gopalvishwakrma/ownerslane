@@ -245,7 +245,7 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badge: "Most Popular",
       badgeIcon: <Flame size={16} className="text-orange-500" />,
       price: "₹ 999",
-      priceNote: "60 days validity",
+      priceNote: "90 days validity",
       tagline: "Best for owners who want direct buyer leads",
       highlighted: true,
       features: [
