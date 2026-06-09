@@ -191,6 +191,7 @@ type Plan = {
   badgeIcon: JSX.Element;
   price: string;
   priceNote?: string;
+  validity?: string;
   tagline: string;
   features: string[];
   highlighted: boolean;
@@ -204,6 +205,7 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badgeIcon: <Flame size={16} className="text-orange-500" />,
       price: "₹ 999",
       priceNote: "Incl. GST",
+      validity: "Validity: 60 days",
       tagline: "Best for owners who want direct tenant leads",
       highlighted: true,
       features: [
@@ -246,6 +248,7 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badgeIcon: <Flame size={16} className="text-orange-500" />,
       price: "₹ 999",
       priceNote: "Incl. GST",
+      validity: "Validity: 90 days",
       tagline: "Best for owners who want direct buyer leads",
       highlighted: true,
       features: [
@@ -338,6 +341,11 @@ const PlansSection = () => {
                 <span className={`text-sm ml-2 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                   {plan.priceNote}
                 </span>
+              )}
+              {plan.validity && (
+                <p className={`text-sm mt-1 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  {plan.validity}
+                </p>
               )}
             </div>
             <p className={`text-sm mb-6 ${plan.highlighted ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
