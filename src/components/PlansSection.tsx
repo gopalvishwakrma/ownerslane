@@ -191,6 +191,7 @@ type Plan = {
   badgeIcon: JSX.Element;
   price: string;
   priceNote?: string;
+  taxNote?: string;
   validity?: string;
   tagline: string;
   features: string[];
@@ -226,6 +227,7 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badgeIcon: <Trophy size={16} className="text-yellow-500" />,
       price: "₹ 4,999",
       priceNote: "Pay only after tenant finalization",
+      taxNote: "Incl. GST",
       tagline: "Best for owners who want OwnersLane to handle everything",
       highlighted: false,
       features: [
@@ -269,6 +271,7 @@ const plansData: Record<"Rent" | "Sell", Plan[]> = {
       badgeIcon: <Trophy size={16} className="text-yellow-500" />,
       price: "₹ 9,999",
       priceNote: "Pay only after successful sale",
+      taxNote: "Incl. GST",
       tagline: "Best for owners who want OwnersLane to handle the entire selling process",
       highlighted: false,
       features: [
@@ -345,6 +348,11 @@ const PlansSection = () => {
               {plan.validity && (
                 <p className={`text-sm mt-1 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                   {plan.validity}
+                </p>
+              )}
+              {plan.taxNote && (
+                <p className={`text-sm mt-1 ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  {plan.taxNote}
                 </p>
               )}
             </div>
